@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  /* Pastel Blue (primary) */
+  --color-primary: oklch(0.82 0.06 235);
+  --color-primary-200: oklch(0.86 0.05 235);
+  --color-primary-400: oklch(0.74 0.10 235);
+  --color-primary-600: oklch(0.60 0.12 235);
+  --color-primary-800: oklch(0.42 0.09 235);
+
+  /* Pastel Green (accent) */
+  --color-accent: oklch(0.88 0.06 160);
+  --color-accent-200: oklch(0.88 0.05 160);
+  --color-accent-400: oklch(0.76 0.10 160);
+  --color-accent-600: oklch(0.60 0.14 160);
+  --color-accent-800: oklch(0.40 0.10 160);
+
+  /* Surfaces (dark-friendly) */
+  --color-surface: #131a2a;
+  --color-bg: #0b1220;
+  --color-fg: #e7eefc;
+}
+
+@layer components {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+@layer utilities {
+  /* Optional dark surface helpers */
+  .bg-surface { background-color: var(--color-surface); }
+  .bg-app     { background-color: var(--color-bg); }
+  .text-fg    { color: var(--color-fg); }
+}
